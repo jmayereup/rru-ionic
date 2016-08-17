@@ -1,0 +1,27 @@
+<form class="col-lg-10 col-lg-offset-1 white fixed-small">
+  <div class="form-group">
+    <label for="Type">Type: </label>
+    <select name="Type" ng-model="vm.item.type">
+        <option value="Unit">Unit</option>
+        <option value="Content">Content</option>
+      </select>
+    <select type="text" ng-init="" ng-model="vm.item.clsName" ng-change="">
+        <option value "">--Select a Class--</option>
+        <option ng-repeat="option in vm.cls" value="{{option.clsName}}">{{option.clsName}}</option>
+      </select> Order (Class.Unit.Lesson): <input type="text" size="8" ng-model="vm.item.order" placeholder="CC.UU.LL" />
+    <button ng-click="vm.toggleForm = !vm.toggleForm">Detail</button>
+    <span>{{vm.item.$id}}</span>
+  </div>
+  <div class="col-lg-10 col-lg-offset-1 white fixed" ng-show="vm.toggleForm">
+    <div class="form-group">
+      <input type="text" ng-model="vm.item.title" placeholder="Enter title" />
+      <input type="text" ng-model="vm.item.link" placeholder="http://www.example.com" />
+      <input type="text" size="7" ng-model="vm.item.source" placeholder="Source" /> Restrict (NA Yet):
+      <input type="checkbox" ng-model="vm.item.teacher" />
+    </div>
+    <textarea ui-tinymce="vm.tinymceOptions" class="form-control" rows="3" ng-model="vm.item.description"></textarea>
+    <button class="btn btn-info btn-md indent" ng-click="vm.updateLink(vm.item)">Save</button>
+    <button class="btn btn-info btn-md indent" ng-click="vm.item={}">Reset</button>
+    <button class="btn btn-danger btn-md pull-right" ng-click="vm.links.$remove(vm.item)">Delete</button>
+  </div>
+</form>

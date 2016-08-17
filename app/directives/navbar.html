@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid" ng-class="{loading:vm.loaded===false}">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Language Center</a>
+        </div>
+        <div class="navbar-collapse collapse" id="myNavbar">
+            <ul class="nav navbar-nav collapsed" data-toggle="collapse" data-target="#myNavbar">
+                <!-- <li><a ng-hide="vm.loaded===true" href="">Loading Data</a></li> -->
+                <li><a href="/msg">Messages</a></li>
+                <li><a href="/class/e1">English 1</a></li>
+                <li><a href="/class/e2">English 2</a></li>
+                <li><a href="/class/e3">English 3</a></li>
+                <li><a href="/class/other">Extra</a></li>
+                <li><a href="/class/teacher">Teacher</a></li>
+                <!-- <li ng-repeat="cls in vm.cls" ng-click="vm.assignCls(cls.clsName)" >
+                    <a>{{cls.clsName}}</a></li> -->
+                <li><a href="/login">Edit</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

@@ -1,0 +1,44 @@
+<!--Creates a list of generated content sorted by class and unit. -->
+
+<div ng-show="vm.canSubmit">
+    <div ng-class="{spacer: vm.canSubmit}">
+        <jm-links-form></jm-links-form>
+    </div>
+</div>
+
+<div class="col-lg-10 col-lg-offset-1 white">
+    <div ng-repeat="l in vm.links">
+        <div ng-if="l.clsName === vm.nav">
+            <div class="row myPanel grey" ng-class="{unit: l.type == 'Unit'}">
+                <div class="col-sm-10" ng-init="showMe = (l.type == 'Unit')" ng-click="showMe=!showMe">
+                    <h4>{{l.title}}</h4>
+                </div>
+            </div>
+            <div class="row subPanel" ng-show="showMe">
+                <div class="col-sm-10">
+                    <div ng-bind-html="l.description | myHtml"></div>
+                    <small>{{l.source}}</small>
+                </div>
+                <div class="col-sm-2">
+                    <a ng-href="{{l.link}}" target="_blank">
+                        <button ng-if="l.link" class='btn btn-default btn-xs'>Open</button>
+                    </a>
+                    <button ng-show="vm.canSubmit" class="btn btn-default btn-xs" ng-click="vm.loadLink(l)">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row myPanel grey" ng-show="vm.canSubmit">
+        <h2>All Links</h2>
+        <div ng-repeat="una in vm.allLinks">
+            <li ng-if="una.clsName === vm.nav.clsName">
+                {{una.order}} - {{una.unit}} - {{una.title}} - {{una.clsName}}
+                <button class="btn btn-default btn-xs indent" ng-click="vm.loadLink(una)">Edit</button>
+                <input type="text" ng-model="una.order" size="4">
+                <button class="btn btn-default btn-xs indent" ng-click="vm.updateLink(una)">Save</button>
+            </li>
+        </div>
+    </div>
+
+</div>

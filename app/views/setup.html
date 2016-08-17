@@ -1,0 +1,53 @@
+<div class="col-lg-10 col-lg-offset-1 white" ng-show="vm.canSubmit">
+    <div>
+        <!-- <p>Data is being restructured. Create units in the same place as classroom content.</p>
+        <select type="text" ng-init="" ng-model="option.clsName" ng-change="">
+            <option value "">--Select a Class--</option>
+            <option ng-repeat="option in vm.cls" value="{{option.clsName}}">{{option.clsName}}</option>
+        </select> -->
+        <div ng-repeat="ua in vm.units" ng-show="ua.unitCls == option.clsName">
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="unitName">Name</label>
+                        <input type="text" class="form-control" ng-init="" ng-model="ua.unitName" ng-change="vm.units.$save(ua)" id="unitName" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="unitDescription">About</label>
+                        <input type="text" class="form-control" ng-init="" ng-model="ua.unitDescription" ng-change="vm.units.$save(ua)" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="unit">Number</label>
+                        <input type="text" ng-init="" ng-model="ua.unit" ng-change="vm.units.$save(ua)" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="unitCls" class="form-control">Class</label>
+                        <select class="form-control" type="select" ng-init="" ng-model="ua.unitCls" ng-change="vm.units.$save(ua)" required>
+                            <option value="">--Select a Class--</option>
+                            <option ng-repeat="option in vm.cls" value="{{option.clsName}}">{{option.clsName}}</option>
+                        </select>
+                    </div>
+                    <!-- <button class="btn btn-info btn-md space-me" ng-click="vm.addUnit(option.clsName)">Add New Unit</button> -->
+                    <button class="btn btn-info btn-md space-me indent" ng-click="vm.units.$remove(ua)">Delete</button>
+                </div>
+            </form>
+        </div>
+        <div></div>
+        <div class="white">
+            <h3>Edit Class</h3>
+            <div ng-repeat="listCls in vm.cls">
+                <input type="text" class="form-control" ng-model="listCls.clsName" ng-change="vm.cls.$save(listCls)" required />
+                <textarea class="form-control" rows="2" ng-model="listCls.clsDescription" ng-change="vm.cls.$save(listCls)"></textarea>
+                <button class="btn btn-info btn-md space-me danger" ng-click="vm.deleteCls(listCls.$id)">Delete Class</button>
+            </div>
+            <button class="btn btn-info btn-md space-me" ng-click="vm.addCls()">Add New Class</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-lg-10 col-lg-offset-1 white" ng-show="!vm.canSubmit">
+    <h3>Please login first.</h3>
+    <button ng-click="vm.useGoogle()" class="btn">Login Here</button>
+    </a>
+</div>

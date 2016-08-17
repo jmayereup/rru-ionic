@@ -1,0 +1,26 @@
+<!--Data Form -->
+<div>
+    <div>
+        <h3>Message Board</h3>
+        <div ng-repeat="x in vm.messages">
+            <div>
+                <h4>{{x.from}}<span class="small indent">#{{x.tag}}</span>
+        <button ng-hide="!vm.canSubmit" type="button" value="Delete" ng-click="vm.messages.$remove(x)" class="btn btn-xs btn-danger pull-right">DELETE</button></h4>
+            </div>
+            <blockquote>
+                <p>{{x.msg}}</p>
+            </blockquote>
+        </div>
+    </div>
+    <div class="white" ng-hide="!vm.canSubmit">
+        <form>
+            <p>From:
+                <input type="text" ng-model="m.from" /> Tag:
+                <input type="text" ng-model="m.tag" />
+            </p>
+            <p>Message:</p>
+            <textarea class="form-control" rows="3" ng-model="m.msg"></textarea>
+            <input class="btn btn-default" type="submit" value="Submit" ng-click="vm.addMsg(m)" />
+        </form>
+    </div>
+</div>

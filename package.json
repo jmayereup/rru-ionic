@@ -1,0 +1,9 @@
+{
+  "name": "rru-app",
+  "description": "A classroom content management app built of firebase",
+  "version": "0.1.1",
+  "dependencies": {
+    "angular-ui-tinymce": "~0.0.14",
+
+  }
+}
