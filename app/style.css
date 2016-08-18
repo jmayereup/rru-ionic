@@ -3,9 +3,13 @@ body {
     background-image: url("img/background-main.jpg");
     background-repeat: repeat;
     font-size: medium;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Fira mono', monospace;
     border-bottom-style: hidden;
 }
+.ptsans {
+    font-family: 'PT Sans', sans-serif;
+}
+
 .navbar a {
     color: white;
 }
@@ -150,4 +154,8 @@ p {
 }
 .link {
     color: green;
+}
+
+.selected {
+    opacity: .5;
 }

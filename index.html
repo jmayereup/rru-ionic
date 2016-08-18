@@ -2,65 +2,57 @@
 <html lang="en-US">
 
 <head>
-    <title>ILC@RRU</title>
-    <meta charset="utf-8">
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./app/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="./app/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Arimo|PT+Sans" rel="stylesheet">
+  <title>ILC@RRU</title>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./app/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="./app/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Fira+Mono" rel="stylesheet">
 
- </head>
+</head>
 
 <body ng-app="app">
-<div>
-  <jm-navbar>Loading</jm-navbar>
-  <div class="col-lg-10 col-lg-offset-1 white">
-    <!-- <adsense
+  <div>
+    <jm-navbar>Loading</jm-navbar>
+    <div class="col-lg-10 col-lg-offset-1 white">
+      <!-- <adsense
       ad-client="ca-pub-7358177326858018"
       ad-slot="7896524483"
       inline-style="display:inline-block;width:728px;height:90px"
       ad-format="auto">
     </adsense> -->
+    </div>
+    <main ng-view></main>
   </div>
-  <main ng-view></main>
-</div>
 
 
-<!--Scripts at bottom for faster loading-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <!--<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.min.js"></script>
+  <!--Scripts at bottom for faster loading-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.min.js"></script>
 
-    <script src="/app/app.js"></script>
-    <script src="/app/factories/dataService.js"></script>
-    <script src="/app/factories/loginService.js"></script>
-    <script src="/app/factories/navService.js"></script>
-    <script src="/app/controllers/msg-ctrl.js"></script>
-    <script src="/app/controllers/login-ctrl.js"></script>
-    <script src="/app/controllers/link-ctrl.js"></script>
-    <script src="/app/controllers/setup-ctrl.js"></script>
-    <script src="/app/controllers/nav-ctrl.js"></script>
-    <script src="/app/directives/directives.js"></script>
-    <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
-    <script src="/bower_components/angular-google-adsense/dist/angular-google-adsense.min.js"></script>
-    <script src="/bower_components/angular-ui-tinymce/dist/tinymce.min.js"></script>
-    <script src="/bower_components/firebase/firebase.js"></script>
-    <script src="/bower_components/angularfire/dist/angularfire.min.js"></script>
-    <!--<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>-->
-    <!--<script src="https://www.gstatic.com/firebasejs/live/3.2.0/firebase.js"></script>-->
-    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-
-    
-    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-
+  <script src="/app/app.js"></script>
+  <script src="/app/factories/dataService.js"></script>
+  <script src="/app/factories/loginService.js"></script>
+  <script src="/app/factories/navService.js"></script>
+  <script src="/app/controllers/msg-ctrl.js"></script>
+  <script src="/app/controllers/login-ctrl.js"></script>
+  <script src="/app/controllers/link-ctrl.js"></script>
+  <script src="/app/controllers/setup-ctrl.js"></script>
+  <script src="/app/controllers/nav-ctrl.js"></script>
+  <script src="/app/directives/directives.js"></script>
+  <script src='/bower_components/tinymce/tinymce.min.js'></script>
+  <script src="/bower_components/angular-google-adsense/dist/angular-google-adsense.min.js"></script>
+  <script src="/bower_components/angular-ui-tinymce/dist/tinymce.min.js"></script>
+  <script src="/bower_components/firebase/firebase.js"></script>
+  <script src="/bower_components/angularfire/dist/angularfire.min.js"></script>
 </body>
+
 </html>

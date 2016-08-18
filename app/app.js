@@ -8,13 +8,11 @@ var app = angular.module('app', ['ngRoute', 'firebase', 'ui.tinymce', 'ngSanitiz
 .config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/msg', {
+      .when('/msg/:m', {
         templateUrl: 'app/views/home.html'
       })
       .when('/class/:cls', {
         templateUrl: 'app/views/class.html'
-        // controller: 'LinkCtrl',
-        // controllerAs: 'vm'
       })
       .when('/login', {
         templateUrl: 'app/views/login.html',

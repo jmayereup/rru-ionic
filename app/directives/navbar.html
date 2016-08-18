@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top ptsans">
     <div class="container-fluid" ng-class="{loading:vm.loaded===false}">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -10,16 +10,15 @@
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
             <ul class="nav navbar-nav collapsed" data-toggle="collapse" data-target="#myNavbar">
-                <!-- <li><a ng-hide="vm.loaded===true" href="">Loading Data</a></li> -->
-                <li><a href="/msg">Messages</a></li>
-                <li><a href="/class/e1">English 1</a></li>
-                <li><a href="/class/e2">English 2</a></li>
-                <li><a href="/class/e3">English 3</a></li>
-                <li><a href="/class/other">Extra</a></li>
-                <li><a href="/class/teacher">Teacher</a></li>
+                <li><a href="/msg/all"  ng-class="{selected: vm.selected === 'm'}" ng-click="vm.selected = 'm'">Messages</a></li>
+                <li><a href="/class/e1" ng-class="{selected: vm.selected === '1'}" ng-click="vm.selected = '1'">English 1</a></li>
+                <li><a href="/class/e2" ng-class="{selected: vm.selected === '2'}" ng-click="vm.selected = '2'">English 2</a></li>
+                <li><a href="/class/e3" ng-class="{selected: vm.selected === '3'}" ng-click="vm.selected = '3'">English 3</a></li>
+                <li><a href="/class/other" ng-class="{selected: vm.selected === 'o'}" ng-click="vm.selected = 'o'">Extra</a></li>
+                <li><a href="/class/teacher" ng-class="{selected: vm.selected === 't'}" ng-click="vm.selected = 't'">Teacher</a></li>
                 <!-- <li ng-repeat="cls in vm.cls" ng-click="vm.assignCls(cls.clsName)" >
                     <a>{{cls.clsName}}</a></li> -->
-                <li><a href="/login">Edit</a></li>
+                <li><a href="/login" ng-class="{selected: vm.selected === 'l'}" ng-click="vm.selected = 'l'">Edit</a></li>
             </ul>
         </div>
 
